@@ -2,6 +2,39 @@ $(document).ready(function () {
 
     // HEADER
 
+    //document.getElementById(#ProductRow).addEventListener('click', () => {
+    //    fetch('/product/partial')
+    //        .then()
+    //})
+
+    $(document).on('keyup', '#input-search', function () {
+        let searchedProduct = $(this).val();
+        $.ajax({
+            method: "get",
+            url: "/home/search?searchText=" + searchedProduct,
+            success: function (json) {
+                console.log(json)
+               
+
+
+            }
+        }) 
+
+    })
+
+    $(document).on('click', '#LoadMore', function () {
+        $.ajax({
+            method : "get", 
+            url: "/product/partial",
+            success: function (html) {
+                console.log(html)
+                $("#ProductRow").append(html)
+
+            
+            }
+        }) 
+    })
+
     $(document).on('click', '#search', function () {
         $(this).next().toggle();
     })

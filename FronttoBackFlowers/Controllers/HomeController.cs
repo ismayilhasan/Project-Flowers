@@ -1,6 +1,9 @@
 ﻿using FronttoBackFlowers.DAL;
+using FronttoBackFlowers.Models;
 using FronttoBackFlowers.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace FronttoBackFlowers.Controllers
 {
@@ -15,6 +18,9 @@ namespace FronttoBackFlowers.Controllers
 
         public IActionResult Index()
         {
+            HttpContext.Session.SetString("session", "Hello");
+            Response.Cookies.Append("cookie", "p324");
+
             var sliderImages = _dbContext.SliderImages.ToList();
             var slider = _dbContext.Sliders.SingleOrDefault();
             var categories = _dbContext.Categories.ToList();
@@ -29,6 +35,37 @@ namespace FronttoBackFlowers.Controllers
             };
 
             return View(homeViewModel);
+        }
+
+        public IActionResult Search(string searchText)
+        {
+            var products = _dbContext.Products.Where(x => x.Name.ToLower().Contains(searchText.ToLower())).ToList();
+
+            return Json(products);
+        }
+
+        public IActionResult Basket()
+        {
+            var basketJson = Request.Cookies["basket"];
+            var products =  JsonConvert.DeserializeObject<List<Product>>(basketJson);
+            return Json(products);
+        }
+
+        public IActionResult AddToBasket(int id)
+        {
+            var product = _dbContext.Products.Include(x => x.Category).SingleOrDefault(x => x.Id == id);
+            if(product == null)
+                return NotFound();
+
+            var products = new List<Product>();
+            products.Add(product);
+ 
+            var productJson = JsonConvert.SerializeObject(products, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Error }); ;
+
+
+            Response.Cookies.Append("basket",productJson);
+
+            return RedirectToAction(nameof(Basket));
         }
     }
 }
