@@ -1,14 +1,17 @@
-﻿@model List<Category>
+﻿@model List<SliderImage>
 
 @{
-    List<Category> categoires = Model;
+    List<SliderImage> sliderImages = Model;
 }
 <div class="row">
     <div class="col-lg-6 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Slide Images</h4>
-              
+                <h4 class="card-title">Slider Images</h4>
+                  @if(sliderImages.Count == 0)
+                  {
+                    <a class="btn btn-primary" asp-controller="SlideImage" asp-action="Create">Create</a>
+                  }
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
@@ -20,15 +23,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var item in categoires)
+                            @foreach (var item in sliderImages)
                             {
                                 <tr>
-                                    <td>@item.Name</td>
-                                    <td>@Html.Raw(item.Description)</td>
+                                    <td><img src="~/img/@item.Name" /></td>
+                                
                                     <td>
                                         <a class="btn btn-primary" asp-action="details" asp-route-id="@item.Id">Details</a>
                                         <a class="btn btn-success" asp-action="update" asp-route-id="@item.Id">Update</a>
-                                        <a class="btn btn-danger" asp-action="delete" asp-route-id="@item.Id">Delete</a>
+                                        <form class="forms-sample" method="post" asp-action="Delete" asp-route-id="@item.Id">
+                                            <button type="submit" class="btn btn-danger mr-2" asp-action="Delete" asp-route-id="@item.Id">Delete</button>
+                                        </form>
                                     </td>
                                     <td><label class="badge badge-warning">In progress</label></td>
                                 </tr>

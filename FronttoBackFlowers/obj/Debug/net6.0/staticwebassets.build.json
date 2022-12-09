@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mmV3XJT1LXSAUboNE3TiMoSlAFq5xYltS/7TF5BHdHs=",
+  "Hash": "ayGWIkRNxJqjBhuPbZzPf9mX8Piv03yRomgJq+CZ64Q=",
   "Source": "FronttoBackFlowers",
   "BasePath": "_content/FronttoBackFlowers",
   "Mode": "Default",
@@ -2635,6 +2635,23 @@
       "OriginalItemSpec": "wwwroot\\Error\\js\\script.js"
     },
     {
+      "Identity": "C:\\Users\\Ismayil Hasanov\\Desktop\\Project-Flowers\\FronttoBackFlowers\\wwwroot\\img\\60cae8ef-e347-4b33-bf1b-e8e70c5d18e2-83c34f37-5dbb-4cba-b355-c9057cc399e1-event3.jpg",
+      "SourceId": "FronttoBackFlowers",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ismayil Hasanov\\Desktop\\Project-Flowers\\FronttoBackFlowers\\wwwroot\\",
+      "BasePath": "_content/FronttoBackFlowers",
+      "RelativePath": "img/60cae8ef-e347-4b33-bf1b-e8e70c5d18e2-83c34f37-5dbb-4cba-b355-c9057cc399e1-event3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\60cae8ef-e347-4b33-bf1b-e8e70c5d18e2-83c34f37-5dbb-4cba-b355-c9057cc399e1-event3.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Ismayil Hasanov\\Desktop\\Project-Flowers\\FronttoBackFlowers\\wwwroot\\img\\blog-feature-img-1.jpg",
       "SourceId": "FronttoBackFlowers",
       "SourceType": "Discovered",
@@ -2786,40 +2803,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\h3-slider-background.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Ismayil Hasanov\\Desktop\\Project-Flowers\\FronttoBackFlowers\\wwwroot\\img\\h3-slider-background-2.jpg",
-      "SourceId": "FronttoBackFlowers",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ismayil Hasanov\\Desktop\\Project-Flowers\\FronttoBackFlowers\\wwwroot\\",
-      "BasePath": "_content/FronttoBackFlowers",
-      "RelativePath": "img/h3-slider-background-2.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\h3-slider-background-2.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Ismayil Hasanov\\Desktop\\Project-Flowers\\FronttoBackFlowers\\wwwroot\\img\\h3-slider-background-3.jpg",
-      "SourceId": "FronttoBackFlowers",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ismayil Hasanov\\Desktop\\Project-Flowers\\FronttoBackFlowers\\wwwroot\\",
-      "BasePath": "_content/FronttoBackFlowers",
-      "RelativePath": "img/h3-slider-background-3.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\h3-slider-background-3.jpg"
     },
     {
       "Identity": "C:\\Users\\Ismayil Hasanov\\Desktop\\Project-Flowers\\FronttoBackFlowers\\wwwroot\\img\\h3-team-img-1.png",

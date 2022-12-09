@@ -3,13 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FronttoBackFlowers.Areas.AdminPanel.Controllers
 {
+    [Area("AdminPanel")]
+    [Authorize]
     public class BaseController : Controller
     {
-        [Area("AdminPanel")]
-        [Authorize]
-        public IActionResult Index()
-        {
-            return View();
-        }
+    
+      
     }
 }

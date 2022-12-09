@@ -1,4 +1,5 @@
 using FronttoBackFlowers.DAL;
+using FronttoBackFlowers.Data;
 using FronttoBackFlowers.Models.IdentityModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +32,9 @@ namespace FronttoBackFlowers
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
             builder.Services.AddSession(opt => opt.IdleTimeout= TimeSpan.FromMinutes(5));
+
+            Constants.RootPath = builder.Environment.WebRootPath;
+            Constants.SliderPath = Path.Combine(Constants.RootPath, "img");
             var app = builder.Build(); 
 
             if(app.Environment.IsDevelopment())
